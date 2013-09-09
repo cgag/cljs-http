@@ -199,9 +199,7 @@
 (defn get
   "Like #'request, but sets the :method and :url as appropriate."
   [url & [req]]
-  (let [req (merge req {:method :get :url url})] 
-    (js/alert req)
-    (request req)))
+  (request (merge req {:method :get :url url})))
 
 (defn head
   "Like #'request, but sets the :method and :url as appropriate."
